@@ -6,7 +6,8 @@ import PackageDescription
 let package = Package(
     name: "TestSPM",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v13),
+        .macOS(.v10_12)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
@@ -15,7 +16,7 @@ let package = Package(
             targets: ["TestSPM"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", .upToNextMajor(from: "5.6.1"))
+        .package(url: "https://github.com/Alamofire/Alamofire.git", branch: "master")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
